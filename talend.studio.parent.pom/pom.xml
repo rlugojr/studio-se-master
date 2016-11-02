@@ -17,6 +17,7 @@
         <maven.compatible.version>${base.version}-SNAPSHOT</maven.compatible.version>
         <repo.type>Snapshot</repo.type>
         <talend.nexus.host>newbuild.talend.com:8081</talend.nexus.host>
+        <talend.nexus.deploy.host>192.168.11.200:8081</talend.nexus.deploy.host>
         <talend.nexus.url>http://${talend.nexus.host}/nexus/content/repositories</talend.nexus.url>
         <talend.nexus.p2unzip.url>http://${talend.nexus.host}/nexus/content/unzip</talend.nexus.p2unzip.url>
         <opensourcesnapshot-unziprepo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSourceSnapshot/org/talend/repo</opensourcesnapshot-unziprepo.url>
@@ -41,13 +42,13 @@
     <distributionManagement>
         <snapshotRepository>
             <id>talend_nexus_deployment</id>
-            <url>${opensourcesnapshot-repo.url}</url>
+            <url>http://${talend.nexus.deploy.host}/nexus/content/repositories/TalendOpenSourceSnapshot</url>
             <snapshots><enabled>true</enabled></snapshots>
             <releases><enabled>false</enabled></releases>
         </snapshotRepository>
         <repository>
             <id>talend_nexus_deployment</id>
-            <url>${opensourcerelease-repo.url}</url>
+            <url>http://${talend.nexus.deploy.host}/nexus/content/repositories/TalendOpenSourceRelease</url>
             <snapshots><enabled>false</enabled></snapshots>
             <releases><enabled>true</enabled></releases>
         </repository>
