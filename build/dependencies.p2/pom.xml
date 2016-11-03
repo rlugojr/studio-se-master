@@ -13,13 +13,13 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>talend_nexus_deployment</id>
+            <id>talend_nexus_deployment_test</id>
             <url>http://${talend.nexus.host}/nexus/content/repositories/TalendOpenSourceSnapshot/</url>
             <snapshots><enabled>true</enabled></snapshots>
             <releases><enabled>false</enabled></releases>
         </snapshotRepository>
         <repository>
-            <id>talend_nexus_deployment</id>
+            <id>talend_nexus_deployment_test</id>
             <url>http://${talend.nexus.host}/nexus/content/repositories/TalendOpenSourceRelease/</url>
             <snapshots><enabled>false</enabled></snapshots>
             <releases><enabled>true</enabled></releases>
