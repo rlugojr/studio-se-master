@@ -8,7 +8,7 @@
     <version>6.3.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
-        <talend.nexus.host>newbuild.talend.com:8081</talend.nexus.host>
+        <talend.nexus.host>192.168.11.200:8081</talend.nexus.host>
     </properties>
 
     <distributionManagement>
@@ -130,7 +130,7 @@
                             <packaging>zip</packaging>
                             <generatePom>true</generatePom>
                             <url>${targetrepository}</url>
-                            <repositoryId>talend_nexus_deployment</repositoryId>
+                            <repositoryId>talend_nexus_deployment_test</repositoryId>
                             <artifactId>${project.artifactId}</artifactId>
                             <groupId>org.talend.repo</groupId>
                             <version>${project.version}</version>
